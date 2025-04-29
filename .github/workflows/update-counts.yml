@@ -3,16 +3,17 @@ name: Update counts
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *" # Runs every hour
-    # - cron: "0 0 * * *" # Runs at 00:00
+    - cron: "0 0,12 * * *"
 
 permissions:
   contents: write
 
 jobs:
-  run:
+  update-counts:
     runs-on: ubuntu-latest
-
+    outputs:
+      changes: ${{ steps.check_changes.outputs.changes }}
+      datetime: ${{ steps.set_datetime.outputs.datetime }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
@@ -29,21 +30,34 @@ jobs:
             pip install -r requirements.txt
           fi
 
-      - name: Set environment variables
-        run: |
-          echo "DATE_TIME=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_ENV
-
       - name: Run script
-        run: python update_counts.py
+        run: |
+          python update_counts.py
         timeout-minutes: 5
+
+      - name: Set current datetime
+        id: set_datetime
+        run: |
+          DATE_TIME=$(date +'%Y-%m-%d %H:%M:%S')
+          echo "datetime=${DATE_TIME}" >> $GITHUB_OUTPUT
 
       - name: Check for changes
         id: check_changes
         run: |
+          git status --porcelain
           if [ -n "$(git status --porcelain)" ]; then
             echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in the repository."
           else
             echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Display result
+        run: |
+          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+            echo "Changes detected at ${{ steps.set_datetime.outputs.datetime }}."
+          else
+            echo "No changes detected at ${{ steps.set_datetime.outputs.datetime }}."
           fi
 
       - name: Configure Git
@@ -57,7 +71,7 @@ jobs:
         run: |
           git checkout main
           git add .
-          git commit -m "Update counts file ($DATE_TIME)"
+          git commit -m "Update files (${{ steps.set_datetime.outputs.datetime }})"
 
       - name: Push changes
         if: steps.check_changes.outputs.changes == 'true'

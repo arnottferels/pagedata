@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-04-29 16:16:22",
+  "stats": [
+    {
+      "/research/doi/10.1177/14780771241254639": [
+        "/dml",
+        "/research/doi/10.1177/14780771241254639"
+      ]
+    },
+    {
+      "/research/doi/10.18517/ijaseit.14.4.19773": [
+        "/ob",
+        "/research/doi/10.18517/ijaseit.14.4.19773"
+      ]
+    },
+    {
+      "/work/acoustic-ray-simulation": [
+        "/work/acoustic-ray-simulation",
+        "/works/acoustic-ray-simulation"
+      ]
+    },
+    {
+      "/work/x-transit-hub": [
+        "/work/x-transit-hub",
+        "/works/x-transit-hub"
+      ]
+    }
+  ]
+}

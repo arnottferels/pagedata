@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-04-29 16:16:22",
+  "stats": [
+    {
+      "/research/doi/10.1177/14780771241254639": {
+        "paths_counts": {
+          "/dml": 0,
+          "/research/doi/10.1177/14780771241254639": 7
+        },
+        "total_count": 7
+      }
+    },
+    {
+      "/research/doi/10.18517/ijaseit.14.4.19773": {
+        "paths_counts": {
+          "/ob": 0,
+          "/research/doi/10.18517/ijaseit.14.4.19773": 8
+        },
+        "total_count": 8
+      }
+    },
+    {
+      "/work/acoustic-ray-simulation": {
+        "paths_counts": {
+          "/work/acoustic-ray-simulation": 0,
+          "/works/acoustic-ray-simulation": 3
+        },
+        "total_count": 3
+      }
+    },
+    {
+      "/work/x-transit-hub": {
+        "paths_counts": {
+          "/work/x-transit-hub": 2,
+          "/works/x-transit-hub": 0
+        },
+        "total_count": 2
+      }
+    }
+  ]
+}

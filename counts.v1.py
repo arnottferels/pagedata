@@ -1,14 +1,14 @@
-import json
 import aiohttp
 import asyncio
-from dataclasses import dataclass, asdict
+import json
+from dataclasses import dataclass
 from typing import Dict, List
 
 FETCH_URL = "https://arnottferels.github.io/a/data/redirect.json"
 COUNTER_URL = "https://arn.goatcounter.com/counter/{pathname}.json"
 
-RAW_FILE = "raw.json"
-OUTPUT_FILE = "counts.json"
+COUNTS_REDIR_MAP_FILE = "c_rm.v1.json"
+COUNTS_OUTPUT_FILE = "c.v1.json"
 
 PathnameKey = str
 RedirectPath = str
@@ -25,11 +25,11 @@ class PathCounts:
 
 
 def transform_data_structure(
-    fetch_data: PathRedirectMappings,
+    rm: PathRedirectMappings,
 ) -> Dict[PathnameKey, PathCounts]:
     return {
         key: PathCounts(paths_counts={path: 0 for path in paths})
-        for key, paths in fetch_data.items()
+        for key, paths in rm.items()
     }
 
 
@@ -46,12 +46,14 @@ async def fetch_redirect_path_count(
         return 0
 
 
-async def fetch_and_cache_data(session: aiohttp.ClientSession) -> PathRedirectMappings:
+async def fetch_and_cache_redirect_map(
+    session: aiohttp.ClientSession,
+) -> PathRedirectMappings:
     async with session.get(FETCH_URL) as response:
         data = await response.json()
-        with open(RAW_FILE, "w") as file:
+        with open(COUNTS_REDIR_MAP_FILE, "w") as file:
             json.dump(data, file, indent=2)
-        print(f"Data fetched and saved to {RAW_FILE}.")
+        print(f"Redirect map fetched and saved to {COUNTS_REDIR_MAP_FILE}.")
         return data
 
 
@@ -71,25 +73,24 @@ async def process_transformed_data(
 async def save_transformed_data(
     transformed_data: Dict[PathnameKey, PathCounts],
 ) -> None:
-    with open(OUTPUT_FILE, "w") as file:
-        json.dump(
-            {
-                key: {
-                    "paths_counts": asdict(path_counts)["paths_counts"],
-                    "total_count": asdict(path_counts)["total_count"],
-                }
-                for key, path_counts in transformed_data.items()
-            },
-            file,
-            indent=2,
-        )
-    print(f"Transformed data saved to {OUTPUT_FILE}.")
+    filtered: Dict[str, Dict[str, int | Dict[str, int]]] = {
+        key: {
+            "paths_counts": {p: c for p, c in pc.paths_counts.items() if c > 0},
+            "total_count": pc.total_count,
+        }
+        for key, pc in transformed_data.items()
+        if any(c > 0 for c in pc.paths_counts.values())
+    }
+
+    with open(COUNTS_OUTPUT_FILE, "w") as file:
+        json.dump(filtered, file, indent=2)
+    print(f"Filtered data saved to {COUNTS_OUTPUT_FILE}.")
 
 
 async def main() -> None:
     async with aiohttp.ClientSession() as session:
-        fetch_data = await fetch_and_cache_data(session)
-        transformed_data = transform_data_structure(fetch_data)
+        redirect_map = await fetch_and_cache_redirect_map(session)
+        transformed_data = transform_data_structure(redirect_map)
         await process_transformed_data(session, transformed_data)
         await save_transformed_data(transformed_data)
 

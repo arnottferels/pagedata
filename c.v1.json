@@ -1,0 +1,117 @@
+{
+  "/concept/north-star": {
+    "paths_counts": {
+      "/prototypes/north-star": 1
+    },
+    "total_count": 1
+  },
+  "/concept/orologio-cosmico": {
+    "paths_counts": {
+      "/concept/orologio-cosmico": 1
+    },
+    "total_count": 1
+  },
+  "/concept/serpentine-pavilion": {
+    "paths_counts": {
+      "/concept/serpentine-pavilion": 1
+    },
+    "total_count": 1
+  },
+  "/concept/weightless": {
+    "paths_counts": {
+      "/concept/weightless": 1
+    },
+    "total_count": 1
+  },
+  "/mention/2023/04/08/itb-graduated-2219-graduates-at-the-april-2023-graduation": {
+    "paths_counts": {
+      "/press/2023/04/08/itb-graduated-2219-graduates-at-the-april-2023-graduation": 1
+    },
+    "total_count": 1
+  },
+  "/post/2024/05/my-second-post": {
+    "paths_counts": {
+      "/blog/2024/05/my-second-post": 2
+    },
+    "total_count": 2
+  },
+  "/post/2024/12/new-article-published-in-ijac": {
+    "paths_counts": {
+      "/blog/2024/12/new-article-published-in-ijac": 2,
+      "/post/2024/12/new-article-published-in-ijac": 1
+    },
+    "total_count": 3
+  },
+  "/research/doi/10.1177/14780771241254639": {
+    "paths_counts": {
+      "/research/doi/10.1177/14780771241254639": 10
+    },
+    "total_count": 10
+  },
+  "/research/doi/10.18517/ijaseit.14.4.19773": {
+    "paths_counts": {
+      "/research/doi/10.18517/ijaseit.14.4.19773": 13
+    },
+    "total_count": 13
+  },
+  "/work/acoustic-ray-simulation": {
+    "paths_counts": {
+      "/works/acoustic-ray-simulation": 3
+    },
+    "total_count": 3
+  },
+  "/work/algae-bio-facade-system": {
+    "paths_counts": {
+      "/work/algae-bio-facade-system": 1
+    },
+    "total_count": 1
+  },
+  "/work/beyond-static": {
+    "paths_counts": {
+      "/works/beyond-static": 1
+    },
+    "total_count": 1
+  },
+  "/work/circular-hub": {
+    "paths_counts": {
+      "/works/circular-hub": 1
+    },
+    "total_count": 1
+  },
+  "/work/container-village": {
+    "paths_counts": {
+      "/works/container-village": 1
+    },
+    "total_count": 1
+  },
+  "/work/kalideres-integrated-bus-terminal": {
+    "paths_counts": {
+      "/works/kalideres-integrated-bus-terminal": 2
+    },
+    "total_count": 2
+  },
+  "/work/kemayoran-a4b": {
+    "paths_counts": {
+      "/work/kemayoran-a4b": 1
+    },
+    "total_count": 1
+  },
+  "/work/rattan-charm": {
+    "paths_counts": {
+      "/work/rattan-charm": 1
+    },
+    "total_count": 1
+  },
+  "/work/rawa-buntu-station-2-0": {
+    "paths_counts": {
+      "/works/rawa-buntu-station-2-0": 1
+    },
+    "total_count": 1
+  },
+  "/work/x-transit-hub": {
+    "paths_counts": {
+      "/work/x-transit-hub": 2
+    },
+    "total_count": 2
+  }
+}

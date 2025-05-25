@@ -1,0 +1,79 @@
+name: Update counts (v1)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 2,4,6"
+
+permissions:
+  contents: write
+
+jobs:
+  update-counts:
+    runs-on: ubuntu-latest
+    outputs:
+      changes: ${{ steps.check_changes.outputs.changes }}
+      datetime: ${{ steps.set_datetime.outputs.datetime }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Set up Python
+        uses: actions/setup-python@v5.6.0
+        with:
+          python-version: "3.13.3"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run script
+        run: |
+          python counts.v1.py
+        timeout-minutes: 5
+
+      - name: Set current datetime
+        id: set_datetime
+        run: |
+          DATE_TIME=$(date +'%Y-%m-%d %H:%M:%S')
+          echo "datetime=${DATE_TIME}" >> $GITHUB_OUTPUT
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected in the repository."
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Display result
+        run: |
+          if [ "${{ steps.check_changes.outputs.changes }}" == "true" ]; then
+            echo "Changes detected at ${{ steps.set_datetime.outputs.datetime }}."
+          else
+            echo "No changes detected at ${{ steps.set_datetime.outputs.datetime }}."
+          fi
+
+      - name: Configure Git
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git checkout main
+          git add .
+          git commit -m "Update files (${{ steps.set_datetime.outputs.datetime }})"
+
+      - name: Push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git push origin main

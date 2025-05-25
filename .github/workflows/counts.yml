@@ -3,7 +3,7 @@ name: Update counts
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * 2,4,6"
+    - cron: "0 6 * * 2,4,6"
 
 permissions:
   contents: write
@@ -31,8 +31,10 @@ jobs:
           fi
 
       - name: Run script
+        env:
+          COUNTS_WEBAPP_URL: ${{ secrets.COUNTS_WEBAPPX_URL }}
         run: |
-          python update_counts.py
+          python counts.py
         timeout-minutes: 5
 
       - name: Set current datetime

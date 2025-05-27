@@ -32,7 +32,7 @@ jobs:
 
       - name: Run script
         env:
-          COUNTS_WEBAPP_URL: ${{ secrets.COUNTS_WEBAPPX_URL }}
+          COUNTS_WEBAPP_URL: ${{ secrets.COUNTS_WEBAPP_URL }}
         run: |
           python counts.py
         timeout-minutes: 5

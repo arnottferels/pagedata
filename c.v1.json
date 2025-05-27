@@ -1,4 +1,16 @@
 {
+  "/concept/guangzhou-stadium": {
+    "paths_counts": {
+      "/concept/guangzhou-stadium": 2
+    },
+    "total_count": 2
+  },
+  "/concept/helix-spire-symphony": {
+    "paths_counts": {
+      "/concept/helix-spire-symphony": 2
+    },
+    "total_count": 2
+  },
   "/concept/north-star": {
     "paths_counts": {
       "/prototypes/north-star": 1
@@ -22,6 +34,12 @@
       "/concept/weightless": 1
     },
     "total_count": 1
+  },
+  "/mention/2019/05/22/competition-of-innovation-and-architectural-facade-design-ideas-by-gbci": {
+    "paths_counts": {
+      "/mention/2019/05/22/competition-of-innovation-and-architectural-facade-design-ideas-by-gbci": 2
+    },
+    "total_count": 2
   },
   "/mention/2023/04/08/itb-graduated-2219-graduates-at-the-april-2023-graduation": {
     "paths_counts": {
@@ -98,15 +116,21 @@
   },
   "/work/rattan-charm": {
     "paths_counts": {
-      "/work/rattan-charm": 1
+      "/work/rattan-charm": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/rawa-buntu-station-2-0": {
     "paths_counts": {
       "/works/rawa-buntu-station-2-0": 1
     },
     "total_count": 1
+  },
+  "/work/topology-generated-structures": {
+    "paths_counts": {
+      "/work/topology-generated-structures": 3
+    },
+    "total_count": 3
   },
   "/work/x-transit-hub": {
     "paths_counts": {

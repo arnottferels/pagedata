@@ -11,7 +11,7 @@ load_dotenv()
 API_URL_KEY = "COUNTS_WEBAPP_URL"
 COUNTER_URL = os.getenv(API_URL_KEY) or sys.exit(f"Error: {API_URL_KEY} is missing.")
 
-FETCH_URL = "https://arnottferels.github.io/a/data/redirect.json"
+FETCH_URL = "https://arnottferels.github.io/a/json/redirect.json"
 
 
 COUNTS_REDIR_MAP_FILE = "c_rm.json"

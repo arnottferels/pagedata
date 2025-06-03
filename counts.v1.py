@@ -4,7 +4,7 @@ import json
 from dataclasses import dataclass
 from typing import Dict, List
 
-FETCH_URL = "https://arnottferels.github.io/a/data/redirect.json"
+FETCH_URL = "https://arnottferels.github.io/a/json/redirect.json"
 COUNTER_URL = "https://arn.goatcounter.com/counter/{pathname}.json"
 
 COUNTS_REDIR_MAP_FILE = "c_rm.v1.json"

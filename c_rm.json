@@ -39,6 +39,9 @@
     "/models/helix-spire-symphony",
     "/prototypes/helix-spire-symphony"
   ],
+  "/concept/niwakaform": [
+    "/concept/niwakaform"
+  ],
   "/concept/north-star": [
     "/concept/north-star",
     "/prototypes/north-star"
@@ -167,27 +170,29 @@
     "/report/mars-tesis/lampiran",
     "/studies/mars-tesis/lampiran"
   ],
-  "/research/doi/10.1177/14780771241254639": [
+  "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": [
     "/articles/doi/10.1177/14780771241254639",
     "/dml",
     "/dml25",
     "/dynamic-2025",
     "/pub/doi/10.1177/14780771241254639",
-    "/research/doi/10.1177/14780771241254639"
+    "/research/doi/10.1177/14780771241254639",
+    "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement"
   ],
-  "/research/doi/10.1177/14780771241254639/abstract": [
-    "/research/doi/10.1177/14780771241254639/abstract"
+  "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement/abstract": [
+    "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement/abstract"
   ],
-  "/research/doi/10.18517/ijaseit.14.4.19773": [
+  "/research/optimization-of-bipv-utilization-with-parametric-approach": [
     "/articles/doi/10.18517/ijaseit.14.4.19773",
     "/ob",
     "/ob24",
     "/optimization-2024",
     "/pub/doi/10.18517/ijaseit.14.4.19773",
-    "/research/doi/10.18517/ijaseit.14.4.19773"
+    "/research/doi/10.18517/ijaseit.14.4.19773",
+    "/research/optimization-of-bipv-utilization-with-parametric-approach"
   ],
-  "/research/doi/10.18517/ijaseit.14.4.19773/abstract": [
-    "/research/doi/10.18517/ijaseit.14.4.19773/abstract"
+  "/research/optimization-of-bipv-utilization-with-parametric-approach/abstract": [
+    "/research/optimization-of-bipv-utilization-with-parametric-approach/abstract"
   ],
   "/talk/2023/07/29/workshop-dialux-ottv": [
     "/presentations/2023/07/29/workshop-dialux-ottv",

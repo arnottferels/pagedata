@@ -177,20 +177,29 @@
     "/articles/doi/10.1177/14780771241254639",
     "/dml",
     "/dml25",
-    "/dynamic-2025",
     "/pub/doi/10.1177/14780771241254639",
+    "/r/dml25",
     "/research/doi/10.1177/14780771241254639",
     "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement"
   ],
   "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement/abstract": [
     "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement/abstract"
   ],
+  "/research/enhancing-low-cost-apartment-performance": [
+    "/elca",
+    "/elca25",
+    "/r/elca25",
+    "/research/enhancing-low-cost-apartment-performance"
+  ],
+  "/research/enhancing-low-cost-apartment-performance/abstract": [
+    "/research/enhancing-low-cost-apartment-performance/abstract"
+  ],
   "/research/optimization-of-bipv-utilization-with-parametric-approach": [
     "/articles/doi/10.18517/ijaseit.14.4.19773",
-    "/ob",
-    "/ob24",
-    "/optimization-2024",
+    "/obipv",
+    "/obipv24",
     "/pub/doi/10.18517/ijaseit.14.4.19773",
+    "/r/obipv24",
     "/research/doi/10.18517/ijaseit.14.4.19773",
     "/research/optimization-of-bipv-utilization-with-parametric-approach"
   ],

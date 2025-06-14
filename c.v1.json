@@ -31,9 +31,9 @@
   },
   "/concept/serpentine-pavilion": {
     "paths_counts": {
-      "/concept/serpentine-pavilion": 1
+      "/concept/serpentine-pavilion": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/concept/weightless": {
     "paths_counts": {
@@ -72,6 +72,12 @@
       "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 3
     },
     "total_count": 13
+  },
+  "/research/enhancing-low-cost-apartment-performance": {
+    "paths_counts": {
+      "/research/enhancing-low-cost-apartment-performance": 1
+    },
+    "total_count": 1
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
@@ -121,6 +127,12 @@
   "/work/kemayoran-a4b": {
     "paths_counts": {
       "/work/kemayoran-a4b": 1
+    },
+    "total_count": 1
+  },
+  "/work/luna": {
+    "paths_counts": {
+      "/work/luna": 1
     },
     "total_count": 1
   },

@@ -1,0 +1,11 @@
+{
+  "use": "v1",
+  "versions": {
+    "v1": {
+      "url": "https://raw.githubusercontent.com/arnottferels/vc/refs/heads/main/json/c.v1.json"
+    },
+    "v2": {
+      "url": "https://raw.githubusercontent.com/arnottferels/vc/refs/heads/main/json/c.v2.json"
+    }
+  }
+}

@@ -7,8 +7,8 @@ from typing import Dict, List
 FETCH_URL = "https://arnottferels.github.io/a/json/redirect.json"
 COUNTER_URL = "https://arn.goatcounter.com/counter/{pathname}.json"
 
-COUNTS_REDIR_MAP_FILE = "c_rm.v1.json"
-COUNTS_OUTPUT_FILE = "c.v1.json"
+COUNTS_REDIR_MAP_FILE = "json/crm.v1.json"
+COUNTS_OUTPUT_FILE = "json/c.v1.json"
 
 PathnameKey = str
 RedirectPath = str

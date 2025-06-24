@@ -141,10 +141,9 @@
     "/post/2024/12/new-article-published-in-ijac"
   ],
   "/report/march-thesis": [
-    "/march-thesis",
     "/mt",
-    "/mt-2023",
     "/mt23",
+    "/r/mt",
     "/report/march-thesis",
     "/studies/march-thesis",
     "/studies/walkability-model-using-dynamic-multilayer-method-in-transit-hub-design-in-west-jakarta"
@@ -158,10 +157,9 @@
     "/studies/march-thesis/appendix"
   ],
   "/report/mars-tesis": [
-    "/mars-tesis",
-    "/mt-2023-id",
-    "/mt-id",
-    "/mt23-id",
+    "/id/mt",
+    "/id/mt23",
+    "/r/id/mt",
     "/report/mars-tesis",
     "/studies/mars-tesis"
   ],

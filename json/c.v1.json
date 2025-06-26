@@ -75,9 +75,9 @@
   "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": {
     "paths_counts": {
       "/research/doi/10.1177/14780771241254639": 10,
-      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 3
+      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 4
     },
-    "total_count": 13
+    "total_count": 14
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
@@ -159,6 +159,12 @@
       "/work/topology-generated-structures": 3
     },
     "total_count": 3
+  },
+  "/work/urban-flow-simulation": {
+    "paths_counts": {
+      "/work/urban-flow-simulation": 1
+    },
+    "total_count": 1
   },
   "/work/x-transit-hub": {
     "paths_counts": {

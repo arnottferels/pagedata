@@ -31,15 +31,21 @@
   },
   "/concept/serpentine-pavilion": {
     "paths_counts": {
-      "/concept/serpentine-pavilion": 2
+      "/concept/serpentine-pavilion": 3
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/concept/timelessness": {
     "paths_counts": {
       "/concept/timelessness": 1
     },
     "total_count": 1
+  },
+  "/concept/voxel-space": {
+    "paths_counts": {
+      "/concept/voxel-space": 2
+    },
+    "total_count": 2
   },
   "/concept/weightless": {
     "paths_counts": {
@@ -75,9 +81,9 @@
   "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": {
     "paths_counts": {
       "/research/doi/10.1177/14780771241254639": 10,
-      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 4
+      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 6
     },
-    "total_count": 14
+    "total_count": 16
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
@@ -88,9 +94,9 @@
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 5
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 6
     },
-    "total_count": 18
+    "total_count": 19
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {

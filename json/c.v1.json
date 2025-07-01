@@ -31,9 +31,9 @@
   },
   "/concept/serpentine-pavilion": {
     "paths_counts": {
-      "/concept/serpentine-pavilion": 3
+      "/concept/serpentine-pavilion": 4
     },
-    "total_count": 3
+    "total_count": 4
   },
   "/concept/timelessness": {
     "paths_counts": {
@@ -43,9 +43,9 @@
   },
   "/concept/voxel-space": {
     "paths_counts": {
-      "/concept/voxel-space": 2
+      "/concept/voxel-space": 4
     },
-    "total_count": 2
+    "total_count": 4
   },
   "/concept/weightless": {
     "paths_counts": {
@@ -94,9 +94,9 @@
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 6
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 7
     },
-    "total_count": 19
+    "total_count": 20
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {

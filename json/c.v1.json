@@ -29,6 +29,12 @@
     },
     "total_count": 1
   },
+  "/concept/pulse-tower": {
+    "paths_counts": {
+      "/concept/pulse-tower": 3
+    },
+    "total_count": 3
+  },
   "/concept/serpentine-pavilion": {
     "paths_counts": {
       "/concept/serpentine-pavilion": 4
@@ -65,6 +71,12 @@
     },
     "total_count": 1
   },
+  "/post/2024/05/my-first-post": {
+    "paths_counts": {
+      "/post/2024/05/my-first-post": 1
+    },
+    "total_count": 1
+  },
   "/post/2024/05/my-second-post": {
     "paths_counts": {
       "/blog/2024/05/my-second-post": 2
@@ -94,9 +106,9 @@
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 7
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 8
     },
-    "total_count": 20
+    "total_count": 21
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
@@ -156,9 +168,10 @@
   },
   "/work/rawa-buntu-station-2-0": {
     "paths_counts": {
+      "/work/rawa-buntu-station-2-0": 1,
       "/works/rawa-buntu-station-2-0": 1
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/topology-generated-structures": {
     "paths_counts": {

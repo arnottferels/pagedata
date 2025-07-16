@@ -1,0 +1,72 @@
+name: "v2: Update counts"
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "v2: Export table (Yesterday)"
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  update-counts:
+    runs-on: ubuntu-latest
+    env:
+      REPO_NAME: ${{ secrets.REPO_NAME }}
+      REPO_DIR: repo
+
+      REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
+      REMOTE_BRANCH: main
+
+      REMOTE_COUNT_FILE: build/unique_visit/page_path_content_page.json
+
+      SILENT: "1"
+      OUTPUT_DIR: v2/json
+      OUTPUT_COUNT_FILE: c.json
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Clone target repo
+        run: |
+          git clone $REMOTE $REPO_DIR
+          cd $REPO_DIR
+          git checkout $REMOTE_BRANCH
+
+      - uses: actions/setup-node@v4
+
+      - name: Install and run
+        run: |
+          cd $REPO_DIR
+          npm install
+          npm run build
+
+      - name: Commit to target repo
+        run: |
+          cd $REPO_DIR
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -q -m "v2: Update counts $(date -u +'%F %H:%M')" || echo "no changes"
+          git push origin $REMOTE_BRANCH
+
+      - name: Copy count file from target repo
+        run: |
+          mkdir -p "$OUTPUT_DIR"
+          cp "$REPO_DIR/$REMOTE_COUNT_FILE" "$OUTPUT_DIR/$OUTPUT_COUNT_FILE"
+
+      - name: Commit copied count file
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git stash -q --include-untracked
+          git pull -q --rebase origin main || exit 1
+          git stash pop -q
+
+          git add "$OUTPUT_DIR/$OUTPUT_COUNT_FILE"
+          git commit -m "v2: Update \`$OUTPUT_COUNT_FILE\` $(date -u +'%F %H:%M')" -q || echo "no changes"
+          git push -q origin main

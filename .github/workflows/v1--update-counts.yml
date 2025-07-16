@@ -1,4 +1,4 @@
-name: Update counts (v1)
+name: "v1: Update counts"
 
 on:
   workflow_dispatch:
@@ -26,19 +26,19 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then
+          if [ -f v1/requirements.txt ]; then
             pip install -r requirements.txt
           fi
 
       - name: Run script
         run: |
-          python counts.v1.py
+          python v1/counts.py
         timeout-minutes: 5
 
       - name: Set current datetime
         id: set_datetime
         run: |
-          DATE_TIME=$(date +'%Y-%m-%d %H:%M:%S')
+          DATE_TIME=$(date -u +'%F %H:%M')
           echo "datetime=${DATE_TIME}" >> $GITHUB_OUTPUT
 
       - name: Check for changes
@@ -71,7 +71,7 @@ jobs:
         run: |
           git checkout main
           git add .
-          git commit -m "Update files (${{ steps.set_datetime.outputs.datetime }})"
+          git commit -m "v1: Update files ${{ steps.set_datetime.outputs.datetime }}"
 
       - name: Push changes
         if: steps.check_changes.outputs.changes == 'true'

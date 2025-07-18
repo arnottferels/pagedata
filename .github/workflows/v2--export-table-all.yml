@@ -21,7 +21,7 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_TABLE_DIR: table/daily
+      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME }}/daily
 
       SILENT: "1"
 

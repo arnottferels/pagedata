@@ -21,7 +21,9 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_COUNT_FILE: build/unique_visit/page_path_content_page.json
+      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME }}/unique_visit/page_path_content_page.json
+
+      TABLE_NAME: ${{ secrets.TABLE_NAME }}
 
       SILENT: "1"
       OUTPUT_DIR: v2/json
@@ -32,17 +34,17 @@ jobs:
 
       - name: Clone target repo
         run: |
-          git clone $REMOTE $REPO_DIR
-          cd $REPO_DIR
-          git checkout $REMOTE_BRANCH
+          git clone "$REMOTE" "$REPO_DIR"
+          cd "$REPO_DIR"
+          git checkout "$REMOTE_BRANCH"
 
       - uses: actions/setup-node@v4
 
-      - name: Install and run
+      - name: Install and build
         run: |
-          cd $REPO_DIR
+          cd "$REPO_DIR"
           npm install
-          npm run build
+          npm run ${{ secrets.TABLE_NAME }}:build
 
       - name: Commit to target repo
         run: |

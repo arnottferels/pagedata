@@ -49,5 +49,5 @@ jobs:
           git add $REMOTE_TABLE_DIR/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "v2: Update table (all)"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME }}(v2): Update table (all)"
           git push origin $REMOTE_BRANCH

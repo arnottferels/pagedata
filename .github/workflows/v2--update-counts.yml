@@ -52,7 +52,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -q -m "v2: Update build directory $(date -u +'%F %H:%M')" || echo "no changes"
+          git commit -q -m "${{ secrets.TABLE_NAME }}(v2): Update build directory $(date -u +'%F %H:%M')" || echo "no changes"
           git push origin $REMOTE_BRANCH
 
       - name: Copy count file from target repo

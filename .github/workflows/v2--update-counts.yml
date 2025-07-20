@@ -21,7 +21,7 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME }}/unique_visit/page_path_content_page.json
+      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME }}/public/counts.json
 
       TABLE_NAME: ${{ secrets.TABLE_NAME }}
 

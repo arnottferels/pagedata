@@ -2,10 +2,10 @@
   "use": "v1",
   "versions": {
     "v1": {
-      "url": "https://raw.githubusercontent.com/arnottferels/vc/refs/heads/main/v1/json/c.json"
+      "url": "https://raw.githubusercontent.com/arnottferels/site-assets/refs/heads/main/vc/v1/json/c.json"
     },
     "v2": {
-      "url": "https://raw.githubusercontent.com/arnottferels/vc/refs/heads/main/v2/json/c.json"
+      "url": "https://raw.githubusercontent.com/arnottferels/site-assets/refs/heads/main/vc/v2/json/c.json"
     }
   }
 }

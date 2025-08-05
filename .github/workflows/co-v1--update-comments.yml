@@ -1,0 +1,82 @@
+# This workflow is part of the full workflow_run chain:
+# 1. vc(v2): Export table (Yesterday)
+# 2. vc(v2): Update counts
+# 3. co(v1): Export table (Yesterday)
+# 4. co(v1): Update comments
+
+name: "co(v1): Update comments"
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "co(v1): Export table (Yesterday)"
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  update-comments:
+    runs-on: ubuntu-latest
+    env:
+      REPO_NAME: ${{ secrets.REPO_NAME }}
+      REPO_DIR: repo # temp
+
+      REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
+      REMOTE_BRANCH: main
+
+      REMOTE_DIR: build/${{ secrets.TABLE_NAME_CO }}/public
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
+
+      SILENT: "1"
+      OUTPUT_DIR: co/v1/json
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Clone target repo
+        run: |
+          git clone "$REMOTE" "$REPO_DIR"
+          cd "$REPO_DIR"
+          git checkout "$REMOTE_BRANCH"
+
+      - uses: actions/setup-node@v4
+
+      - name: Install and build
+        run: |
+          cd "$REPO_DIR"
+          npm install
+          npm run ${{ secrets.TABLE_NAME_CO }}:build
+
+      - name: Commit to target repo
+        run: |
+          cd $REPO_DIR
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -q -m "${{ secrets.TABLE_NAME_CO }}(v1): Update build directory $(date -u +'%F %H:%M')" || echo "no changes"
+          git push origin $REMOTE_BRANCH
+
+      - name: Copy built files from target repo
+        run: |
+          mkdir -p "$OUTPUT_DIR/${{ secrets.TABLE_NAME_CO }}"
+          if [ -d "$REPO_DIR/$REMOTE_DIR" ] && [ "$(ls -A "$REPO_DIR/$REMOTE_DIR")" ]; then
+            cp -r "$REPO_DIR/$REMOTE_DIR/"* "$OUTPUT_DIR"
+          else
+            echo "No files to copy."
+          fi
+
+      - name: Commit and push updated files
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git stash -q --include-untracked
+          git pull -q --rebase origin main || exit 1
+          git stash pop -q
+
+          git add "$OUTPUT_DIR"
+          git commit -m "co(v1): Update $OUTPUT_DIR directory $(date -u +'%F %H:%M')" -q || echo "no changes"
+          git push -q origin main

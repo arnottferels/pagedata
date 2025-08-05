@@ -1,0 +1,53 @@
+name: "co(v1): Export table (All)"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export-table-all:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_URL: ${{ secrets.PROJECT_URL }}
+      SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
+
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
+
+      REPO_NAME: ${{ secrets.REPO_NAME }}
+      REPO_DIR: repo
+
+      REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
+      REMOTE_BRANCH: main
+
+      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME_CO }}/daily
+
+      SILENT: "1"
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - name: Clone repo
+        run: |
+          git clone $REMOTE $REPO_DIR
+          cd $REPO_DIR
+          git checkout $REMOTE_BRANCH
+
+      - name: Run export script
+        run: |
+          cd $REPO_DIR
+          npm install
+          npm run exportTable -- $TABLE_NAME -d all
+          npm run format -- $REMOTE_TABLE_DIR -e json -- --log-level error
+
+      - name: Commit and push
+        run: |
+          cd $REPO_DIR
+          git add $REMOTE_TABLE_DIR/
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME_CO }}(v1): Update table (all)"
+          git push origin $REMOTE_BRANCH

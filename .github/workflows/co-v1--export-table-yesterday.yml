@@ -1,0 +1,69 @@
+# This workflow is part of the full workflow_run chain:
+# 1. vc(v2): Export table (Yesterday)
+# 2. vc(v2): Update counts
+# 3. co(v1): Export table (Yesterday)
+# 4. co(v1): Update comments
+
+name: "co(v1): Export table (Yesterday)"
+
+on:
+  workflow_dispatch:
+  # schedule:
+  #   - cron: "0 3 * * *"
+  workflow_run:
+    workflows:
+      - "vc(v2): Update counts"
+    types:
+      - completed
+
+permissions:
+  contents: write
+
+jobs:
+  export-table-yesterday:
+    runs-on: ubuntu-latest
+    env:
+      PROJECT_URL: ${{ secrets.PROJECT_URL }}
+      SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
+
+      TABLE_NAME: ${{ secrets.TABLE_NAME_CO }}
+
+      REPO_NAME: ${{ secrets.REPO_NAME }}
+      REPO_DIR: repo
+
+      REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
+      REMOTE_BRANCH: main
+
+      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME_CO }}/daily
+
+      SILENT: "1"
+
+    steps:
+      - uses: actions/checkout@v4.2.2
+        with:
+          token: ${{ secrets.PUSH_TOKEN }}
+
+      - name: Clone repo
+        run: |
+          git clone $REMOTE $REPO_DIR
+          cd $REPO_DIR
+          git checkout $REMOTE_BRANCH
+
+      - name: Set yesterday date
+        run: echo "YESTERDAY=$(date -u -d 'yesterday' +%F)" >> $GITHUB_ENV
+
+      - name: Run export script
+        run: |
+          cd $REPO_DIR
+          npm install
+          npm run exportTable -- $TABLE_NAME -d $YESTERDAY
+          npm run format -- $REMOTE_TABLE_DIR -e json -- --log-level error
+
+      - name: Commit and push
+        run: |
+          cd $REPO_DIR
+          git add $REMOTE_TABLE_DIR/
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME_CO }}(v1): Update table $YESTERDAY"
+          git push origin $REMOTE_BRANCH

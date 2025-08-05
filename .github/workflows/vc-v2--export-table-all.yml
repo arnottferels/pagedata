@@ -1,4 +1,4 @@
-name: "v2: Export table (All)"
+name: "vc(v2): Export table (All)"
 
 on:
   workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
       PROJECT_URL: ${{ secrets.PROJECT_URL }}
       SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME }}
+      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }}
 
       REPO_NAME: ${{ secrets.REPO_NAME }}
       REPO_DIR: repo
@@ -21,7 +21,7 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME }}/daily
+      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME_VC }}/daily
 
       SILENT: "1"
 
@@ -49,5 +49,5 @@ jobs:
           git add $REMOTE_TABLE_DIR/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "${{ secrets.TABLE_NAME }}(v2): Update table (all)"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME_VC }}(v2): Update table (all)"
           git push origin $REMOTE_BRANCH

@@ -1,10 +1,16 @@
-name: "v2: Update counts"
+# This workflow is part of the full workflow_run chain:
+# 1. vc(v2): Export table (Yesterday)
+# 2. vc(v2): Update counts
+# 3. co(v1): Export table (Yesterday)
+# 4. co(v1): Update comments
+
+name: "vc(v2): Update counts"
 
 on:
   workflow_dispatch:
   workflow_run:
     workflows:
-      - "v2: Export table (Yesterday)"
+      - "vc(v2): Export table (Yesterday)"
     types:
       - completed
 
@@ -21,12 +27,12 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME }}/public/counts.json
+      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME_VC }}/public/counts.json
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME }}
+      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }}
 
       SILENT: "1"
-      OUTPUT_DIR: v2/json
+      OUTPUT_DIR: vc/v2/json
       OUTPUT_COUNT_FILE: c.json
 
     steps:
@@ -44,7 +50,7 @@ jobs:
         run: |
           cd "$REPO_DIR"
           npm install
-          npm run ${{ secrets.TABLE_NAME }}:build
+          npm run ${{ secrets.TABLE_NAME_VC }}:build
 
       - name: Commit to target repo
         run: |
@@ -52,7 +58,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -q -m "${{ secrets.TABLE_NAME }}(v2): Update build directory $(date -u +'%F %H:%M')" || echo "no changes"
+          git commit -q -m "${{ secrets.TABLE_NAME_VC }}(v2): Update build directory $(date -u +'%F %H:%M')" || echo "no changes"
           git push origin $REMOTE_BRANCH
 
       - name: Copy count file from target repo
@@ -70,5 +76,5 @@ jobs:
           git stash pop -q
 
           git add "$OUTPUT_DIR"
-          git commit -m "v2: Update $OUTPUT_DIR directory $(date -u +'%F %H:%M')" -q || echo "no changes"
+          git commit -m "vc(v2): Update $OUTPUT_DIR directory $(date -u +'%F %H:%M')" -q || echo "no changes"
           git push -q origin main

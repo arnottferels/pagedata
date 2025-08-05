@@ -1,4 +1,10 @@
-name: "v2: Export table (Yesterday)"
+# This workflow is part of the full workflow_run chain:
+# 1. vc(v2): Export table (Yesterday)
+# 2. vc(v2): Update counts
+# 3. co(v1): Export table (Yesterday)
+# 4. co(v1): Update comments
+
+name: "vc(v2): Export table (Yesterday)"
 
 on:
   workflow_dispatch:
@@ -15,7 +21,7 @@ jobs:
       PROJECT_URL: ${{ secrets.PROJECT_URL }}
       SERVICE_ROLE: ${{ secrets.SERVICE_ROLE }}
 
-      TABLE_NAME: ${{ secrets.TABLE_NAME }}
+      TABLE_NAME: ${{ secrets.TABLE_NAME_VC }}
 
       REPO_NAME: ${{ secrets.REPO_NAME }}
       REPO_DIR: repo
@@ -23,7 +29,7 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME }}/daily
+      REMOTE_TABLE_DIR: table/${{ secrets.TABLE_NAME_VC }}/daily
 
       SILENT: "1"
 
@@ -54,5 +60,5 @@ jobs:
           git add $REMOTE_TABLE_DIR/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "${{ secrets.TABLE_NAME }}(v2): Update table $YESTERDAY"
+          git commit --allow-empty -m "${{ secrets.TABLE_NAME_VC }}(v2): Update table $YESTERDAY"
           git push origin $REMOTE_BRANCH

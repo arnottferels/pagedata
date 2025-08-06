@@ -112,9 +112,9 @@
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 18
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 19
     },
-    "total_count": 31
+    "total_count": 32
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
@@ -147,12 +147,6 @@
       "/works/container-village": 1
     },
     "total_count": 1
-  },
-  "/work/kalideres-integrated-bus-terminal": {
-    "paths_counts": {
-      "/works/kalideres-integrated-bus-terminal": 2
-    },
-    "total_count": 2
   },
   "/work/kemayoran-a4b": {
     "paths_counts": {

@@ -125,9 +125,9 @@
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {
-      "/work/algae-bio-facade-system": 3
+      "/work/algae-bio-facade-system": 4
     },
-    "total_count": 3
+    "total_count": 4
   },
   "/work/beyond-static": {
     "paths_counts": {
@@ -147,6 +147,12 @@
       "/works/container-village": 1
     },
     "total_count": 1
+  },
+  "/work/kalideres-integrated-bus-terminal": {
+    "paths_counts": {
+      "/works/kalideres-integrated-bus-terminal": 2
+    },
+    "total_count": 2
   },
   "/work/kemayoran-a4b": {
     "paths_counts": {

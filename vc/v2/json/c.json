@@ -99,21 +99,22 @@
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
-      "/work/acoustic-ray-simulation": 1
+      "/work/acoustic-ray-simulation": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {
-      "/work/algae-bio-facade-system": 4
+      "/work/algae-bio-facade-system": 5
     },
-    "total_count": 4
+    "total_count": 5
   },
   "/work/beyond-static": {
     "paths_counts": {
+      "/work/beyond-static": 1,
       "/works/beyond-static": 1
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/circular-hub": {
     "paths_counts": {
@@ -125,6 +126,12 @@
   "/work/container-village": {
     "paths_counts": {
       "/works/container-village": 1
+    },
+    "total_count": 1
+  },
+  "/work/daylight-enhancement-in-architectural-design": {
+    "paths_counts": {
+      "/work/daylight-enhancement-in-architectural-design": 1
     },
     "total_count": 1
   },
@@ -142,9 +149,9 @@
   },
   "/work/mathematical-structures": {
     "paths_counts": {
-      "/work/mathematical-structures": 1
+      "/work/mathematical-structures": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/modeling-with-algorithms": {
     "paths_counts": {
@@ -179,9 +186,9 @@
   },
   "/work/urban-flow-simulation": {
     "paths_counts": {
-      "/work/urban-flow-simulation": 1
+      "/work/urban-flow-simulation": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/x-transit-hub": {
     "paths_counts": {

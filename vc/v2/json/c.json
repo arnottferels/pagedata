@@ -86,9 +86,9 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 1
+      "/research/enhancing-low-cost-apartment-performance": 3
     },
-    "total_count": 1
+    "total_count": 3
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
@@ -137,9 +137,10 @@
   },
   "/work/kalideres-integrated-bus-terminal": {
     "paths_counts": {
+      "/work/kalideres-integrated-bus-terminal": 2,
       "/works/kalideres-integrated-bus-terminal": 2
     },
-    "total_count": 2
+    "total_count": 4
   },
   "/work/kemayoran-a4b": {
     "paths_counts": {

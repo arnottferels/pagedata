@@ -1,9 +1,9 @@
 {
   "/concept/guangzhou-stadium": {
     "paths_counts": {
-      "/concept/guangzhou-stadium": 2
+      "/concept/guangzhou-stadium": 3
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/concept/helix-spire-symphony": {
     "paths_counts": {
@@ -105,9 +105,9 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 4
+      "/research/enhancing-low-cost-apartment-performance": 6
     },
-    "total_count": 4
+    "total_count": 6
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {

@@ -27,7 +27,7 @@ jobs:
       REMOTE: https://x-access-token:${{ secrets.PUSH_TOKEN }}@github.com/arnottferels/${{ secrets.REPO_NAME }}.git
       REMOTE_BRANCH: main
 
-      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME_VC }}/public/counts.json
+      REMOTE_COUNT_FILE: build/${{ secrets.TABLE_NAME_VC }}/public/v2/counts.json
 
       TABLE_NAME: ${{ secrets.TABLE_NAME_VC }}
 
@@ -50,7 +50,7 @@ jobs:
         run: |
           cd "$REPO_DIR"
           npm install
-          npm run ${{ secrets.TABLE_NAME_VC }}:build
+          npm run v2:${{ secrets.TABLE_NAME_VC }}:build
 
       - name: Commit to target repo
         run: |

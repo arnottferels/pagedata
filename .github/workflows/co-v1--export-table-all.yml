@@ -47,7 +47,16 @@ jobs:
         run: |
           cd $REPO_DIR
           git add $REMOTE_TABLE_DIR/
+
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git commit --allow-empty -m "${{ secrets.TABLE_NAME_CO }}(v1): Update table (all)"
+
+          COMMIT_MSG="${{ secrets.TABLE_NAME_CO }}(v1): Update table (all)"
+
+          if git diff --cached --quiet; then
+            git commit --allow-empty -m "$COMMIT_MSG [empty commit]"
+          else
+            git commit -m "$COMMIT_MSG"
+          fi
+
           git push origin $REMOTE_BRANCH

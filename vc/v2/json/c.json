@@ -35,6 +35,12 @@
     },
     "total_count": 3
   },
+  "/concept/the-ring-jia-du-clubhouse": {
+    "paths_counts": {
+      "/concept/the-ring-jia-du-clubhouse": 1
+    },
+    "total_count": 1
+  },
   "/concept/weightless": {
     "paths_counts": {
       "/concept/weightless": 1
@@ -93,9 +99,9 @@
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 23
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 24
     },
-    "total_count": 36
+    "total_count": 37
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {

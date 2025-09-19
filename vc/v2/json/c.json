@@ -86,9 +86,9 @@
   "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": {
     "paths_counts": {
       "/research/doi/10.1177/14780771241254639": 10,
-      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 5
+      "/research/dynamic-multi-layer-walkability-model-for-transit-oriented-movement": 6
     },
-    "total_count": 15
+    "total_count": 16
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
@@ -143,10 +143,10 @@
   },
   "/work/kalideres-integrated-bus-terminal": {
     "paths_counts": {
-      "/work/kalideres-integrated-bus-terminal": 2,
+      "/work/kalideres-integrated-bus-terminal": 3,
       "/works/kalideres-integrated-bus-terminal": 2
     },
-    "total_count": 4
+    "total_count": 5
   },
   "/work/kemayoran-a4b": {
     "paths_counts": {
@@ -193,9 +193,9 @@
   },
   "/work/urban-flow-simulation": {
     "paths_counts": {
-      "/work/urban-flow-simulation": 4
+      "/work/urban-flow-simulation": 5
     },
-    "total_count": 4
+    "total_count": 5
   },
   "/work/x-transit-hub": {
     "paths_counts": {

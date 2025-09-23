@@ -111,9 +111,9 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 22
+      "/research/enhancing-low-cost-apartment-performance": 23
     },
-    "total_count": 22
+    "total_count": 23
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
@@ -201,13 +201,6 @@
   "/work/rattan-charm": {
     "paths_counts": {
       "/work/rattan-charm": 3
-    },
-    "total_count": 3
-  },
-  "/work/rawa-buntu-station-2-0": {
-    "paths_counts": {
-      "/work/rawa-buntu-station-2-0": 2,
-      "/works/rawa-buntu-station-2-0": 1
     },
     "total_count": 3
   },

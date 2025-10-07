@@ -11,6 +11,12 @@
     },
     "total_count": 2
   },
+  "/concept/niwakaform": {
+    "paths_counts": {
+      "/concept/niwakaform": 1
+    },
+    "total_count": 1
+  },
   "/concept/north-star": {
     "paths_counts": {
       "/prototypes/north-star": 1
@@ -117,9 +123,9 @@
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {
-      "/work/algae-bio-facade-system": 11
+      "/work/algae-bio-facade-system": 12
     },
-    "total_count": 11
+    "total_count": 12
   },
   "/work/beyond-static": {
     "paths_counts": {

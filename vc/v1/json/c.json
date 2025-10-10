@@ -13,9 +13,9 @@
   },
   "/concept/niwakaform": {
     "paths_counts": {
-      "/concept/niwakaform": 3
+      "/concept/niwakaform": 4
     },
-    "total_count": 3
+    "total_count": 4
   },
   "/concept/north-star": {
     "paths_counts": {
@@ -117,9 +117,9 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 26
+      "/research/enhancing-low-cost-apartment-performance": 27
     },
-    "total_count": 26
+    "total_count": 27
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
@@ -163,9 +163,9 @@
   },
   "/work/daylight-enhancement-in-architectural-design": {
     "paths_counts": {
-      "/work/daylight-enhancement-in-architectural-design": 1
+      "/work/daylight-enhancement-in-architectural-design": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/kalideres-integrated-bus-terminal": {
     "paths_counts": {
@@ -176,9 +176,9 @@
   },
   "/work/kemayoran-a4b": {
     "paths_counts": {
-      "/work/kemayoran-a4b": 2
+      "/work/kemayoran-a4b": 3
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/work/luna": {
     "paths_counts": {
@@ -192,17 +192,11 @@
     },
     "total_count": 1
   },
-  "/work/modeling-with-algorithms": {
-    "paths_counts": {
-      "/work/modeling-with-algorithms": 1
-    },
-    "total_count": 1
-  },
   "/work/nurture": {
     "paths_counts": {
-      "/work/nurture": 1
+      "/work/nurture": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/rattan-charm": {
     "paths_counts": {
@@ -225,9 +219,9 @@
   },
   "/work/urban-flow-simulation": {
     "paths_counts": {
-      "/work/urban-flow-simulation": 5
+      "/work/urban-flow-simulation": 6
     },
-    "total_count": 5
+    "total_count": 6
   },
   "/work/x-transit-hub": {
     "paths_counts": {

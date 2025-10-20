@@ -1,4 +1,10 @@
 {
+  "/concept/el-palmeral-de-las-sorpresas": {
+    "paths_counts": {
+      "/concept/el-palmeral-de-las-sorpresas": 1
+    },
+    "total_count": 1
+  },
   "/concept/guangzhou-stadium": {
     "paths_counts": {
       "/concept/guangzhou-stadium": 3
@@ -104,16 +110,16 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 32
+      "/research/enhancing-low-cost-apartment-performance": 33
     },
-    "total_count": 32
+    "total_count": 33
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {
       "/research/doi/10.18517/ijaseit.14.4.19773": 13,
-      "/research/optimization-of-bipv-utilization-with-parametric-approach": 30
+      "/research/optimization-of-bipv-utilization-with-parametric-approach": 31
     },
-    "total_count": 43
+    "total_count": 44
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {

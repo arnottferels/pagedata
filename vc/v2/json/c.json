@@ -141,10 +141,10 @@
   },
   "/work/beyond-static": {
     "paths_counts": {
-      "/work/beyond-static": 1,
+      "/work/beyond-static": 2,
       "/works/beyond-static": 1
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/work/circular-hub": {
     "paths_counts": {
@@ -167,9 +167,9 @@
   },
   "/work/intersecting-dimensions": {
     "paths_counts": {
-      "/work/intersecting-dimensions": 1
+      "/work/intersecting-dimensions": 2
     },
-    "total_count": 1
+    "total_count": 2
   },
   "/work/kalideres-integrated-bus-terminal": {
     "paths_counts": {

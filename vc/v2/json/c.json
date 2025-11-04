@@ -129,9 +129,9 @@
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
-      "/work/acoustic-ray-simulation": 15
+      "/work/acoustic-ray-simulation": 16
     },
-    "total_count": 15
+    "total_count": 16
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {
@@ -148,10 +148,10 @@
   },
   "/work/circular-hub": {
     "paths_counts": {
-      "/work/circular-hub": 1,
+      "/work/circular-hub": 2,
       "/works/circular-hub": 1
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/work/container-village": {
     "paths_counts": {

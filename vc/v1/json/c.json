@@ -108,6 +108,18 @@
     },
     "total_count": 3
   },
+  "/report/march-thesis/abstract": {
+    "paths_counts": {
+      "/report/march-thesis/abstract": 1
+    },
+    "total_count": 1
+  },
+  "/report/mars-tesis": {
+    "paths_counts": {
+      "/report/mars-tesis": 1
+    },
+    "total_count": 1
+  },
   "/report/mars-tesis/lampiran": {
     "paths_counts": {
       "/report/mars-tesis/lampiran": 2
@@ -136,10 +148,10 @@
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
-      "/work/acoustic-ray-simulation": 12,
+      "/work/acoustic-ray-simulation": 13,
       "/works/acoustic-ray-simulation": 3
     },
-    "total_count": 15
+    "total_count": 16
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {

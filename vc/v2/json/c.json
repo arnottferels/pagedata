@@ -101,6 +101,18 @@
     },
     "total_count": 2
   },
+  "/report/march-thesis/abstract": {
+    "paths_counts": {
+      "/report/march-thesis/abstract": 2
+    },
+    "total_count": 2
+  },
+  "/report/mars-tesis": {
+    "paths_counts": {
+      "/report/mars-tesis": 2
+    },
+    "total_count": 2
+  },
   "/report/mars-tesis/lampiran": {
     "paths_counts": {
       "/report/mars-tesis/lampiran": 2
@@ -116,9 +128,9 @@
   },
   "/research/enhancing-low-cost-apartment-performance": {
     "paths_counts": {
-      "/research/enhancing-low-cost-apartment-performance": 36
+      "/research/enhancing-low-cost-apartment-performance": 37
     },
-    "total_count": 36
+    "total_count": 37
   },
   "/research/optimization-of-bipv-utilization-with-parametric-approach": {
     "paths_counts": {

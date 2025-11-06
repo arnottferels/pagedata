@@ -43,9 +43,9 @@
   },
   "/concept/serpentine-pavilion": {
     "paths_counts": {
-      "/concept/serpentine-pavilion": 4
+      "/concept/serpentine-pavilion": 5
     },
-    "total_count": 4
+    "total_count": 5
   },
   "/concept/the-ring-jia-du-clubhouse": {
     "paths_counts": {
@@ -103,9 +103,9 @@
   },
   "/report/march-thesis/abstract": {
     "paths_counts": {
-      "/report/march-thesis/abstract": 2
+      "/report/march-thesis/abstract": 3
     },
-    "total_count": 2
+    "total_count": 3
   },
   "/report/mars-tesis": {
     "paths_counts": {
@@ -141,9 +141,9 @@
   },
   "/work/acoustic-ray-simulation": {
     "paths_counts": {
-      "/work/acoustic-ray-simulation": 16
+      "/work/acoustic-ray-simulation": 18
     },
-    "total_count": 16
+    "total_count": 18
   },
   "/work/algae-bio-facade-system": {
     "paths_counts": {
@@ -195,6 +195,12 @@
       "/work/kemayoran-a4b": 5
     },
     "total_count": 5
+  },
+  "/work/luna": {
+    "paths_counts": {
+      "/work/luna": 1
+    },
+    "total_count": 1
   },
   "/work/mathematical-structures": {
     "paths_counts": {
